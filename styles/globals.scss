@@ -1,0 +1,78 @@
+// styles/globals.scss
+
+
+// Variables SASS
+$primary-color: #005cb8; // Azul FIFA
+$secondary-color: #333;
+$accent-color: #f6ca28; // Un amarillo de contraste
+
+// Fuente
+// styles/globals.scss
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Variables (de ejemplo):
+$primary-color: #005cb8;
+$secondary-color: #333;
+$accent-color: #f6ca28;
+
+// Definimos el fondo del body
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('/bg-fifa.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  position: relative; // Necesario para poder usar pseudo-elemento
+}
+
+// Pseudo-elemento que crea el overlay y el desenfoque
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0; // top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, 0.5); // Capa negra semitransparente
+  backdrop-filter: blur(5px);     // Desenfoque
+  z-index: -1;                    // Para que quede "detrás" del contenido
+}
+
+
+// Clases globales para botones
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+
+  &.primary {
+    background-color: $primary-color;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &.secondary {
+    background-color: $accent-color;
+    color: #000;
+
+    &:hover {
+      background-color: darken($accent-color, 5%);
+    }
+  }
+}
+
+// Resaltar textos
+.highlight {
+  color: $accent-color;
+  font-weight: bold;
+}

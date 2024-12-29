@@ -1,0 +1,57 @@
+// styles/Standings.module.scss
+
+// Variables SASS
+$primary-color: #005cb8; // Azul FIFA
+$secondary-color: #333;
+$accent-color: #f6ca28; // Un amarillo de contraste
+
+
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.message {
+  font-size: 1.2rem;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  th,
+  td {
+    border: 1px solid #444;
+    padding: 0.8rem;
+    text-align: center;
+    color: #fff;
+  }
+
+  thead {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+.playerCell {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playerImg {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
